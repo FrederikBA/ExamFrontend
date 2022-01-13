@@ -69,7 +69,7 @@ const CreateBooking = () => {
       <ul>
         {assistants.map((a) =>
           <li key={a.id}>
-            {a.name} <input onChange={(event) => addAssistant(event.target.value, event.target.checked)} type="checkbox" id="assistantId" name={a.name} value={a.id}></input>
+            {a.name} <input className="form-check-input" onChange={(event) => addAssistant(event.target.value, event.target.checked)} type="checkbox" id="assistantId" name={a.name} value={a.id}></input>
           </li>)}
       </ul>
       <button onClick={createBooking} className="btn btn-primary mt-3">Create</button>

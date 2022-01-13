@@ -96,3 +96,16 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.loginInput {
+  margin-top: 5px;
+  width: 50%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.loginButton {
+  width: 20%;
+  margin: 10px;
+}

@@ -33,13 +33,15 @@ const Login = ({ onLogin }) => {
     }
 
     return (
-        <div>
+        <div className="centerContent">
             <h1>Login</h1>
             <p className="errorMessage">{loginError}</p>
             <form onChange={onChange} >
-                <input placeholder="User Name" id="username" />
-                <input type="password" placeholder="Password" id="password" />
-                <button onClick={login}>Login</button>
+                <input className="loginInput" placeholder="User Name" id="username" />
+                <br></br>
+                <input className="loginInput" type="password" placeholder="Password" id="password" />
+                <br></br>
+                <button className="btn btn-success loginButton" onClick={login}>Login</button>
             </form>
         </div >
     )
