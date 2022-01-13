@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = 'http://localhost:8080/ExamBackend_war_exploded/api';
+const URL = 'https://frederikcphb.dk/tomcat/exam/api';
 
 const apiUtils = () => {
 

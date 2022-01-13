@@ -92,7 +92,7 @@ const Cars = () => {
               <td>{c.regNumber}</td>
               <td>{c.model}</td>
               <td>{c.make}</td>
-              <td>{c.year},-</td>
+              <td>{c.year}</td>
               <td><button onClick={() => openModal(c.id)} className="btn btn-primary">Edit</button></td>
             </tr>)}
         </tbody>
