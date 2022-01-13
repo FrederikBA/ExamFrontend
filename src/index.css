@@ -76,3 +76,23 @@ ul.header li a:hover:not(.active) {
   width: 150px;
   margin-top: 10px;
 }
+
+.add-remove {
+  width: 150px;
+  margin-top: 10px;
+}
+
+.assistants {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.editButton {
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

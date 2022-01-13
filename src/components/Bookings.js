@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import apiUtils from "../utils/apiUtils";
 import Modal from 'react-modal';
+import { NavLink } from 'react-router-dom';
 
 const customStyles = {
   content: {
@@ -75,7 +76,7 @@ const Bookings = () => {
               <td>{b.duration}</td>
               <td>{b.car.regNumber}</td>
               <td><button onClick={() => openModal(b.id)} className="btn btn-primary">View</button></td>
-              <td><button className="btn btn-primary">Edit Assistants</button></td>
+              <td><NavLink to={`/edit-booking-assistants/${b.id}`}><button className="btn btn-primary">Edit Assistants</button></NavLink></td>
               <td><button onClick={() => deleteBooking(b.id)} className="btn btn-danger">Delete</button></td>
             </tr>)}
         </tbody>
