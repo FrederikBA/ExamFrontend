@@ -3,13 +3,18 @@ import apiUtils from "../utils/apiUtils"
 
 const AssistantTable = () => {
   const [assistants, setAssistants] = useState([]);
+  const [statusMessage, setstatusMessage] = useState("");
 
   const URL = apiUtils.getUrl()
 
   useEffect(() => {
     const getAssistants = async () => {
-      const response = await apiUtils.getAuthAxios().get(URL + '/assistant/all')
-      setAssistants(response.data.assistants);
+      try {
+        const response = await apiUtils.getAuthAxios().get(URL + '/assistant/all')
+        setAssistants(response.data.assistants);
+      } catch (error) {
+        setstatusMessage(error.response.data.message)
+      }
     }
     getAssistants()
   }, [URL]);
@@ -38,7 +43,8 @@ const AssistantTable = () => {
             </tr>)}
         </tbody>
       </table>
-    </div>
+      <p style={{ color: '#FF0000' }}>{statusMessage}</p>
+    </div >
   )
 }
 
