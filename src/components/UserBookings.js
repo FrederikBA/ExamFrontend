@@ -44,7 +44,7 @@ const UserBookings = () => {
 
   return (
     <div className="centerContent">
-      <h1>UserBookings</h1>
+      <h1>Hello {localStorage.getItem('user')}, these are your bookings</h1>
       <table className="table">
         <thead>
           <tr>

@@ -63,3 +63,7 @@ ul.header li a:hover:not(.active) {
 .modalContent {
   font-weight: bold;
 }
+
+.addInput {
+  margin-top: 10px;
+}
