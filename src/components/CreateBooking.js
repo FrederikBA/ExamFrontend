@@ -2,7 +2,6 @@ import { useState } from "react"
 import apiUtils from "../utils/apiUtils"
 
 const CreateBooking = () => {
-  const init = { duration: 0, car: { regNumber: "", model: "", make: "", year: 0 }, assistants: [{ id: 0 }], user: "" }
   const [booking, setBooking] = useState({});
   const [statusMessage, setStatusMessage] = useState("");
   const [msgColor, setMsgColor] = useState("");
@@ -32,7 +31,7 @@ const CreateBooking = () => {
         user: localStorage.getItem('user')
       })
       setMsgColor('#4caf50');
-      setStatusMessage('Movie Added Successfully!');
+      setStatusMessage('Booking created successfully!');
     } catch (error) {
       setStatusMessage(error.response.data.message);
       setMsgColor('#FF0000')

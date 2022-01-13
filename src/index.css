@@ -67,3 +67,12 @@ ul.header li a:hover:not(.active) {
 .addInput {
   margin-top: 10px;
 }
+
+.statusMsg {
+  font-weight: bold;
+}
+
+.addButton {
+  width: 150px;
+  margin-top: 10px;
+}
