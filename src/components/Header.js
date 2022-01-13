@@ -16,6 +16,7 @@ const Header = ({ isLoggedIn, currentRoles, setCurrentRoles, onLogout }) => {
                 <li><NavLink activeclassname='active' to='/'>Home</NavLink></li>
 
                 {authUtils.handleAccess('user', currentRoles) && <li><NavLink activeclassname='active' to='/user'>User</NavLink></li>}
+                {authUtils.handleAccess('user', currentRoles) && <li><NavLink activeclassname='active' to='/your-bookings'>Your bookings</NavLink></li>}
                 {authUtils.handleAccess('user', currentRoles) && <li><NavLink activeclassname='active' to='/assistants'>Washing Assistants</NavLink></li>}
                 {authUtils.handleAccess('admin', currentRoles) && <li> <NavLink activeclassname='active' to='/admin'>Admin</NavLink></li>}
 

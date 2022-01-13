@@ -59,3 +59,7 @@ ul.header li a:hover:not(.active) {
 .centerContent {
   text-align: center;
 }
+
+.modalContent {
+  font-weight: bold;
+}
