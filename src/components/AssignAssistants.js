@@ -3,7 +3,7 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 import apiUtils from "../utils/apiUtils"
 
-const EditBookingAssistants = () => {
+const AssignAssistants = () => {
   const [assistants, setAssistants] = useState([]);
   const [selectedAssistants, setSelectedAssistants] = useState([]);
   const [statusMessage, setStatusMessage] = useState("");
@@ -46,7 +46,7 @@ const EditBookingAssistants = () => {
 
   return (
     <div className="centerContent">
-      <h3>Editing booking number: {id}  </h3>
+      <h3>Asign employees to booking number: {id}  </h3>
       <p className="statusMsg" style={{ color: msgColor }}>{statusMessage}</p>
       <ul>
         {assistants.map((a) =>
@@ -59,4 +59,4 @@ const EditBookingAssistants = () => {
   )
 }
 
-export default EditBookingAssistants
+export default AssignAssistants

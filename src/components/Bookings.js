@@ -59,11 +59,12 @@ const Bookings = () => {
           <tr>
             <th>ID</th>
             <th>User</th>
-            <th>Booking Created</th>
+            <th>Last update</th>
             <th>Duration of car wash (in minutes)</th>
             <th>Car (Registration Number)</th>
             <th>See assigned washing assisstant(s)</th>
-            <th>Edit assigned washing assistents</th>
+            <th>Assign washing assistents</th>
+            <th>Edit</th>
             <th>Delete</th>
           </tr>
         </thead>
@@ -76,7 +77,8 @@ const Bookings = () => {
               <td>{b.duration}</td>
               <td>{b.car.regNumber}</td>
               <td><button onClick={() => openModal(b.id)} className="btn btn-primary">View</button></td>
-              <td><NavLink to={`/edit-booking-assistants/${b.id}`}><button className="btn btn-primary">Edit Assistants</button></NavLink></td>
+              <td><NavLink to={`/assign-assistants/${b.id}`}><button className="btn btn-primary">Assign</button></NavLink></td>
+              <td><NavLink to={`/edit-booking/${b.id}`}><button className="btn btn-primary">Edit</button></NavLink></td>
               <td><button onClick={() => deleteBooking(b.id)} className="btn btn-danger">Delete</button></td>
             </tr>)}
         </tbody>

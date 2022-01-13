@@ -18,9 +18,9 @@ const Header = ({ isLoggedIn, currentRoles, setCurrentRoles, onLogout }) => {
                 {authUtils.handleAccess('user', currentRoles) && <li><NavLink activeclassname='active' to='/book'>Book carwash</NavLink></li>}
                 {authUtils.handleAccess('user', currentRoles) && <li><NavLink activeclassname='active' to='/your-bookings'>Your bookings</NavLink></li>}
                 {authUtils.handleAccess('user', currentRoles) && <li><NavLink activeclassname='active' to='/assistants'>Washing Assistants</NavLink></li>}
-                {authUtils.handleAccess('admin', currentRoles) && <li> <NavLink activeclassname='active' to='/admin'>Admin</NavLink></li>}
-                {authUtils.handleAccess('admin', currentRoles) && <li> <NavLink activeclassname='active' to='/create-assistant'>Create Assistant</NavLink></li>}
-                {authUtils.handleAccess('admin', currentRoles) && <li> <NavLink activeclassname='active' to='/bookings'>All bookings</NavLink></li>}
+                {authUtils.handleAccess('admin', currentRoles) && <li> <NavLink activeclassname='active' to='/create-assistant'>Manage Assistants</NavLink></li>}
+                {authUtils.handleAccess('admin', currentRoles) && <li> <NavLink activeclassname='active' to='/bookings'>Manage bookings</NavLink></li>}
+                {authUtils.handleAccess('admin', currentRoles) && <li> <NavLink activeclassname='active' to='/cars'>Manage cars</NavLink></li>}
 
                 {!isLoggedIn && <li><NavLink activeclassname='active' to='/login'>Login</NavLink></li>}
                 {isLoggedIn && <button onClick={onClick} className='logout'>Logout</button>}

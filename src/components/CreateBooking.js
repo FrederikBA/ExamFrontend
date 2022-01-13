@@ -10,7 +10,6 @@ const CreateBooking = () => {
 
   const handleInput = (event) => {
     setBooking({ ...booking, [event.target.id]: event.target.value })
-    console.log(booking);
   }
 
   const createBooking = async () => {
