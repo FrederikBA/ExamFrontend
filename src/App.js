@@ -7,6 +7,7 @@ import Login from './components/Login';
 import LandingPage from './components/LandingPage';
 import User from './components/User';
 import Admin from './components/Admin';
+import AssistantTable from './components/AssistantTable';
 import NoMatch from './components/NoMatch';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/login' element={<Login onLogin={() => setIsLoggedIn(true)} />} />
         <Route path='landing-page' element={<LandingPage currentRoles={currentRoles} setCurrentRoles={setCurrentRoles} />} />
         <Route path='user' element={<User currentRoles={currentRoles} />} />
+        <Route path='assistants' element={<AssistantTable currentRoles={currentRoles} />} />
         <Route path='admin' element={<Admin currentRoles={currentRoles} />} />
         <Route path='*' element={<NoMatch />} />
       </Routes>
