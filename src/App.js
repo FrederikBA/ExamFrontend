@@ -10,6 +10,7 @@ import AssistantTable from './components/AssistantTable';
 import UserBookings from './components/UserBookings';
 import CreateBooking from './components/CreateBooking';
 import CreateAssistant from './components/CreateAssistant';
+import Bookings from './components/Bookings';
 import NoMatch from './components/NoMatch';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='assistants' element={<AssistantTable currentRoles={currentRoles} />} />
         <Route path='admin' element={<Admin currentRoles={currentRoles} />} />
         <Route path='create-assistant' element={<CreateAssistant currentRoles={currentRoles} />} />
+        <Route path='bookings' element={<Bookings currentRoles={currentRoles} />} />
         <Route path='*' element={<NoMatch />} />
       </Routes>
     </div >
